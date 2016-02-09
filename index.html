@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+  <script src="js/avatar.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+<div ng-app='app' ng-controller='mainCtrl'>
+<h1>Create new user</h1>
+<form name='userForm' ng-submit='addNew(userForm)'>
+      <input placeholder='Name' ng-model='userForm.name'/>
+      <input placeholder='Image Url' ng-model='userForm.url'/>
+      <button type='submit'>Add New</button>
+</form>
+<ul class='User-list'>
+ <li ng-repeat='user in users'>
+   {{user.name}}<img src={{user.avatarUrl}} width='50px' >
+ </li>
+</body>
+</html>
+
